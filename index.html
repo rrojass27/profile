@@ -353,33 +353,36 @@
                 </div>
             </div>
         </section>
-        <section id="entretenimiento">
-            <h2>Entretenimiento</h2>
-            <div class="entertainment-section">
-                <div class="entertainment-column">
-                    <h3>YouTube</h3>
-                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=2r.Ingenieria" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="entertainment-column">
-                    <h3>Instagram</h3>
-                    <iframe class="social-embed" src="https://www.instagram.com/rodolfo.27/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-                </div>
-                <div class="entertainment-column">
-                    <h3>LinkedIn</h3>
-                    <iframe class="social-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6789012345678901234" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
+<section id="entretenimiento">
+    <h2>Entretenimiento</h2>
+    <div class="entertainment-section">
+        <div class="entertainment-column">
+            <h3>YouTube</h3>
+            <a href="https://www.youtube.com/channel/UCYpu6CYxJuZgM_f8p1DcIkw" target="_blank">
+                <img src="youtube.png" alt="YouTube" class="social-image">
+            </a>
+        </div>
+        <div class="entertainment-column">
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/rodolfo.27/" target="_blank">
+                <img src="instagram.png" alt="Instagram" class="social-image">
+            </a>
+        </div>
+        <div class="entertainment-column">
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/rodolfors27/" target="_blank">
+                <img src="linke.png" alt="LinkedIn" class="social-image">
+            </a>
+        </div>
+    </div>
+</section>
+
 <section id="contacto">
     <h2>Contacto</h2>
-    <form id="contactForm" action="https://formspree.io/f/xyzgeyqg" method="POST">
+    <form id="contactForm" action="mailto:rodo.rojas42@gmail.com" method="POST" enctype="text/plain">
         <div class="form-group">
             <label for="nombre">Nombre y Apellido:</label>
             <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
         </div>
         <div class="form-group">
             <label for="email">Correo Electrónico:</label>
@@ -390,10 +393,32 @@
             <textarea id="mensaje" name="mensaje" required></textarea>
         </div>
         <button type="submit">Enviar</button>
-        <p id="form-success" style="display:none; color:green;">¡Mensaje enviado con éxito!</p>
-        <p id="form-error" style="display:none; color:red;">Ocurrió un error al enviar el mensaje. Por favor, inténtelo de nuevo.</p>
     </form>
 </section>
+
+<style>
+    .entertainment-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .entertainment-column {
+        flex: 1;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .social-image {
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .social-image:hover {
+        transform: scale(1.05);
+    }
+</style>
 
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
